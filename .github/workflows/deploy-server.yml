@@ -41,6 +41,6 @@ jobs:
           # Hostname or IP address of the remote server(s). Separate multiple servers with a blank space. Example: 'user@mydomain.com:22 user@otherdomain.com:2222'
           hosts: 182.160.11.117
           # The private key (id_rsa) content for authenticating to the SSH server(s). Recommended to store it as a GitHub Secret.
-          privateKey: ${{ ljh.pk }}
+          privateKey: ${{ ljh_pk }}
           # Used to view all environment variables in the logs, please note that this could expose sensitive data.
           debug:  optional
