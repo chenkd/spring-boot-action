@@ -23,7 +23,8 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                sh "ls -l /var/jenkins_home/.m2/repository/com/example/spring-boot-action/${env.jar_version}/spring-boot-action-${env.jar_version}.jar"
+                sh "scp ~/workspace/jenkins-pipeline@2/?/.m2/repository/com/example/spring-boot-action/${env.jar_version}/spring-boot-action-${env.jar_version}.jar root@ljh:/root/test/jenkins/"
+                sh "ssh root@ljh cd /root/test/jenkins && java -jar /root/test/jenkins/spring-boot-action-${env.jar_version}.jar"
             }
         }
 
