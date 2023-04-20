@@ -12,7 +12,7 @@ pipeline {
         stage('Build') {
             agent {
                 docker {
-                    image 'maven:3-alpine'
+                    image 'maven:3.9.0-eclipse-temurin-11'
                     args '-v /var/jenkins_home/.m2:/root/.m2'
                 }
             }
