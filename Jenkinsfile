@@ -23,7 +23,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                sh 'ls -l /var/jenkins_home/.m2/repository/com/example/spring-boot-action/${env.jar_version}/spring-boot-action-${env.jar_version}.jar'
+                sh "ls -l /var/jenkins_home/.m2/repository/com/example/spring-boot-action/${env.jar_version}/spring-boot-action-${env.jar_version}.jar"
             }
         }
 
